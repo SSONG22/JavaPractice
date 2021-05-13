@@ -1,5 +1,7 @@
 package supplier;
 
+import java.util.function.Supplier;
+
 public class Main {
     public static void main(String[] args) {
         Cat cat = (Cat) AnimalFactory.getAnimal(AnimalFactory.AnimalType.CAT);
@@ -7,5 +9,8 @@ public class Main {
 
         cat.walk();
         dog.walk();
+
+        Supplier<String> helloSupplier = () -> "HELLO";
+        System.out.println(helloSupplier.get()+" SUPPLIER");
     }
 }
