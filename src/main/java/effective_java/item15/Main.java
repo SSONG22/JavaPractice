@@ -6,5 +6,8 @@ public class Main {
         Outer.setOuter("outer");
 //        StaticNestedClassInner 클래스는 외부에서 부를 수 없다.
         StaticNestedClass.StaticNestedClassInner2 = new StaticNestedClass.StaticNestedClassInner2();
+
+        Parent child = new Child();
+        child.accessModifier();
     }
 }
