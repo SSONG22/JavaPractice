@@ -1,4 +1,4 @@
-package generic;
+package generic.ex;
 
 public class SimpleArrayListForInteger {
     private int size;

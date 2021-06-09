@@ -1,4 +1,4 @@
-package generic;
+package generic.ex;
 
 public class GenericArrayList<T> {
     private Object[] elementData = new Object[5];

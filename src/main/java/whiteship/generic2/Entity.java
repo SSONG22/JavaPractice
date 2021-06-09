@@ -6,4 +6,5 @@ public class Entity<K> {
     public K getId() {
         return id;
     }
+
 }

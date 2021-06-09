@@ -1,4 +1,4 @@
-package generic;
+package generic.ex;
 
 public class SimpleArrayForString {
     private int size;

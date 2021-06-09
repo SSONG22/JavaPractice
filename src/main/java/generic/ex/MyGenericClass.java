@@ -1,4 +1,4 @@
-package generic;
+package generic.ex;
 
 public class MyGenericClass<T> {
     T element;

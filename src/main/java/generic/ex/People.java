@@ -1,4 +1,4 @@
-package generic;
+package generic.ex;
 
 public class People<T, M> {
     private T name;
