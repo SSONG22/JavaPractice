@@ -8,11 +8,11 @@ public class superTypeToken {
     static class Sup<T> {
         T value;
     }
+    // NESTED CLASS -> INNER CLASS ?
     // LOCAL CLASS
     public static void main(String[] args) throws Exception {
-        class Sub extends Sup<List<String>> {}
-        Sup s = new Sup<String>(); // 호환성 문제때문에 정보를 삭제한다.
-        Sup b = new Sub();
+//        class Sub extends Sup<String> {} // 서브 클래스
+        Sup b = new Sup<String>(); // 익명 클래스
         Type t = b.getClass().getGenericSuperclass(); // Sup<String>
         ParameterizedType ptype = (ParameterizedType) t;
         System.out.println(ptype.getActualTypeArguments()[0]); // string
