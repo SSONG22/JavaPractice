@@ -13,4 +13,11 @@ public class Adapters {
     public static <E> Stream<E> streamOf(Iterable<E> iterable) {
         return StreamSupport.stream(iterable.spliterator(), false);
     }
+
+    public static void main(String[] args) {
+
+        for(ProcessHandle ph : iterableOf(ProcessHandle.allProcesses())){
+            System.out.println(ph.toString());
+        }
+    }
 }
