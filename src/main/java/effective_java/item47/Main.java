@@ -1,5 +1,7 @@
 package effective_java.item47;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Main {
@@ -20,5 +22,9 @@ public class Main {
         for(String game : Adapters.iterableOf(games)){
             System.out.println(game);
         }
+
+        List<String> list =Arrays.asList("a");
+        Stream<String> stream = Stream.of("a");
+        System.out.println(list +" "+stream);
     }
 }
