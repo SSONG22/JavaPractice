@@ -15,7 +15,7 @@ public class Attacks {
         start = new Date();
         end = new Date();
         p = new Period(start, end);
-        p.end().setYear(78);  // Modifies internals of p!
+//        p.end().setYear(78);  // Modifies internals of p!
         System.out.println(p);
     }
 }
