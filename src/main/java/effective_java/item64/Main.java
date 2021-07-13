@@ -1,7 +1,6 @@
 package effective_java.item64;
 
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,11 +13,5 @@ public class Main {
 
 //        Naver Pay by cash
 //        Naver Pay by credit card
-
-        PriorityQueue pq = new PriorityQueue();
-        Queue q = new PriorityQueue();
-        pq.comparator();
-//        q.comparator();
     }
-
 }
