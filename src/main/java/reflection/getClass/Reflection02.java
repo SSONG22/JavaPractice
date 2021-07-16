@@ -1,4 +1,4 @@
-package reflection;
+package reflection.getClass;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -88,6 +88,7 @@ public class Reflection02 {
         Arrays.stream(methods).forEach(System.out::println);
         // Modifier 를 이용한 메소드의 제거자 확인
         Arrays.stream(methods).forEach(m -> {
+            int modifiers = m.getModifiers();
             System.out.printf("[%s]\n", m.getName());
             System.out.println(m.getReturnType());
             System.out.println(m.getDeclaredAnnotations()); // getDeclaredAnnotations, getExceptionTypes, getParameterTypes 는

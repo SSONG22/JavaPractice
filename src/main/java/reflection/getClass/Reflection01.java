@@ -1,4 +1,4 @@
-package reflection;
+package reflection.getClass;
 
 import java.util.HashSet;
 import java.util.Set;
