@@ -10,6 +10,7 @@ public class DeserializationBomb {
     public static void main(String[] args) throws Exception {
         System.out.println(bomb().length);
         deserialize(bomb());
+//        bomb();
     }
 
     static byte[] bomb() {
