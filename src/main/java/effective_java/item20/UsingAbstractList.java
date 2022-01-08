@@ -9,7 +9,7 @@ public class UsingAbstractList {
     static List<Integer> intArrayAsList(int[] array) {
         Objects.requireNonNull(array);
 
-        return new AbstractList<>() {
+        return new AbstractList<Integer>() {
             @Override
             public Integer get(int index) {
                 return array[index];
