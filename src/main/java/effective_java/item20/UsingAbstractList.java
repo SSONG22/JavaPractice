@@ -6,6 +6,7 @@ import java.util.Objects;
 
 public class UsingAbstractList {
 
+    // 익명 내부 클래스(아이템 24) -> 정적 팩토리 메서드
     static List<Integer> intArrayAsList(int[] array) {
         Objects.requireNonNull(array);
 
