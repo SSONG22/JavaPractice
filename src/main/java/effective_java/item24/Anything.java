@@ -13,7 +13,7 @@ public class Anything {
     };
 
     // 비정적 메서드
-    void test(){
+    void test() {
         Operator operator = new Operator() {
 
             @Override
@@ -27,7 +27,7 @@ public class Anything {
     }
 
     // 정적 메서드
-    static void test2(){
+    static void test2() {
         Operator operator = new Operator() {
 
             @Override
@@ -40,9 +40,11 @@ public class Anything {
     }
 
     // 지역 클래스
-    class Local{
-        void local(){
-            System.out.println(number); // 비정적 문맥에서 바깥 인스턴스를 참조할 수 있다.
+    void local() {
+        class Local {
+            void local() {
+                System.out.println(number); // 비정적 문맥에서 바깥 인스턴스를 참조할 수 있다.
+            }
         }
     }
 }
