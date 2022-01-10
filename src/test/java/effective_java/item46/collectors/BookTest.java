@@ -1,6 +1,5 @@
 package effective_java.item46.collectors;
 
-import com.sun.tools.javac.util.Convert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
