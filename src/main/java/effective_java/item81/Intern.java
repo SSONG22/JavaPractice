@@ -2,6 +2,8 @@ package effective_java.item81;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Intern {
     // Concurrent canonicalizing map atop ConcurrentMap - not optimal
@@ -22,5 +24,19 @@ public class Intern {
                 result = s;
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
+        try {
+            long result = ConcurrentTimer.time(executorService, 3, () -> {
+                System.out.println("hello");
+            });
+            System.out.println(result);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            executorService.shutdown();
+        }
     }
 }

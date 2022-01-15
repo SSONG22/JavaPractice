@@ -2,10 +2,10 @@ package effective_java.item83;
 
 public class Initialization {
 
-    // Normal initialization of an instance field4 - Page 282
+    // 일반 초기화
     private final FieldType field1 = computeFieldValue();
 
-    // Lazy initialization of instance field4 - synchronized accessor - Page 333
+    // 지연 초기화가 초기화 순환성을 깨뜨릴 것 같으면 synchronized 를 써라
     private FieldType field2;
     private synchronized FieldType getField2() {
         if (field2 == null)
@@ -13,7 +13,7 @@ public class Initialization {
         return field2;
     }
 
-    // Lazy initialization holder class idiom for static fields - Page 334
+    // 정적 필드 지연 초기화 - 홀더 클래스 관용구
     private static class FieldHolder {
         static final FieldType field = computeFieldValue();
     }
@@ -21,9 +21,8 @@ public class Initialization {
     private static FieldType getField() { return FieldHolder.field; }
 
 
-    // Double-check idiom for lazy initialization of instance fields - Page 334
+    // 이중 검사 관용구
     private volatile FieldType field4;
-
     // NOTE: The code for this method in the first printing had a serious error (see errata for details)!
     private FieldType getField4() {
         FieldType result = field4;
