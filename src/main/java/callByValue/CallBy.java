@@ -27,7 +27,7 @@ public class CallBy {
 
     private static void changeReference(Foo a) {
         Foo b = new Foo("other");
-        a = b;
+        a = b; // 참조 사본을 바꾸는 것뿐이다.
     }
 
 

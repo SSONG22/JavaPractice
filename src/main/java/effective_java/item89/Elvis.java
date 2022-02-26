@@ -10,4 +10,5 @@ public enum Elvis {
     public void printFavorites() {
         System.out.println(Arrays.toString(favoriteSongs));
     }
+
 }
